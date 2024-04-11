@@ -1,0 +1,77 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import EventPost from "../../components/EventPost.astro";
+import EventHero from "../../components/EventHero.astro";
+import Container from "../../components/Container.astro";
+
+const pageTitle = "Events | FOSSUOK";
+const allEvents = await getCollection("events");
+allEvents.sort((a, b) => b.data.date - a.data.date);
+---
+
+<Layout title={pageTitle}>
+  <main class="space-y-16 mb-40 transition-fade">
+    <EventHero />
+    <section
+      class="container mx-auto px-4 mt-16 text-gray-700 dark:text-gray-300"
+    >
+    <Container>
+      <h2 class="text-3xl font-bold mb-6">Upcoming Events</h2>
+        <div class="grid grid-cols-1 gap-8">
+          {
+            allEvents.filter(
+              (event) => event.data.date >= new Date()
+            ).reverse().map((event) => (
+              <EventPost
+                url={"/events/" + event.slug}
+                event={{
+                  title: event.data.title,
+                  date: event.data.date,
+                  location: event.data.location,
+                  description: event.data.description,
+                  image: event.data.image,
+                  slug: event.slug,
+                  tags: event.data.tags,
+                  time: event.data.time,
+                  speakers: event.data.speakers,
+                  register: event.data.registrationLink
+                }}
+              />
+            ))
+          }
+        </div>
+    </Container>
+    </section>
+    <section
+      class="container mx-auto px-4 mt-16 text-gray-700 dark:text-gray-300"
+    >
+    <Container>
+      <h2 class="text-3xl font-bold mb-6">Past Events</h2>
+        <div class="grid grid-cols-1 gap-8">
+          {
+            allEvents.filter(
+              (event) => event.data.date < new Date()
+            ).map((event) => (
+              <EventPost
+                url={"/events/" + event.slug}
+                event={{
+                  title: event.data.title,
+                  date: event.data.date,
+                  location: event.data.location,
+                  description: event.data.description,
+                  image: event.data.image,
+                  slug: event.slug,
+                  tags: event.data.tags,
+                  time: event.data.time,
+                  speakers: event.data.speakers,
+                }}
+              />
+            ))
+          }
+        </div>
+      </Container>
+    </section>
+
+  </main>
+</Layout>

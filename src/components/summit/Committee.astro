@@ -1,0 +1,36 @@
+---
+import Container from "../Container.astro"
+import {summitCommitee,workshopCommitee} from "../../data/CommitteeList"
+import CommiteeCard from "./PersonCard.astro"
+---
+
+<div id="committee">
+  <Container>
+      <div class="mb-12 space-y-2 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 md:text-4xl dark:text-white">Summit Committee</h2>
+      </div>
+      <div class="grid mb-8 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        
+        {
+            summitCommitee && summitCommitee.length>0 && summitCommitee.map(member=>{
+                return <CommiteeCard {...member} />
+            })
+        }
+        
+      </div>
+    </Container>
+    <Container>
+      <div class="mb-12 space-y-2 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 md:text-4xl dark:text-white">Workshop Committee</h2>
+      </div>
+      <div class="grid mb-8 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        
+        {
+            workshopCommitee && workshopCommitee.length>0 && workshopCommitee.map(member=>{
+                return <CommiteeCard {...member} />
+            })
+        }
+        
+      </div>
+    </Container>
+</div>

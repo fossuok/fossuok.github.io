@@ -1,0 +1,121 @@
+---
+import AboutHero from "../components/AboutHero.astro"
+import History from "../components/History.astro"
+import TerminalWindow from "../components/TerminalWindow.astro"
+import Layout from "../layouts/Layout.astro"
+const pageTitle = "About | FOSSUOK"
+---
+<Layout title={pageTitle}>
+    <main class="space-y-16 mb-40 transition-fade text-gray-800 dark:text-gray-200">
+        <AboutHero />
+        <section class="container mx-auto px-4 md:px-0">
+            <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+              <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold sm:text-4xl">About FOSSUOK</h2>
+                <img src="/images/about-team.jpg" alt="line" class="w-full rounded-lg mx-auto mt-4" />
+                <TerminalWindow >
+                    <div class="mt-4 flex">
+                        <span class="text-green-400">name:</span>
+                        <p class="flex-1 typing items-center pl-2">
+                            FOSS Community - University of Kelaniya
+                        </p>
+                    </div>
+                    <div class="mt-2 flex">
+                        <span class="text-green-400">description:</span>
+                        <p class="flex-1 typing items-center pl-2">
+                            Student-led initiative promoting Free & Open Source Software (FOSS) among students.
+                        </p>
+                    </div>
+                    <div class="mt-2 flex">
+                        <p class="text-green-400">mission:</p><br/>
+                    </div> 
+                    <div class="mt-2 flex">
+                        <span class="text-green-400 pl-4">learn:</span>
+                        <span class="flex-1 typing items-center pl-2">true</span><br>
+                        
+                    </div>
+                    <div class="mt-2 flex">
+                        <span class="text-green-400 pl-4">collaborate:</span>
+                        <span class="flex-1 typing items-center pl-2">true</span><br>    
+                    </div>
+                    <div class="mt-2 flex">
+                        <span class="text-green-400 pl-4">contribute:</span>
+                        <span class="flex-1 typing items-center pl-2">true</span><br>
+                    </div>
+                    <div class="mt-2 flex">
+                        <span class="text-green-400 pl-2">activities:</span>
+                    </div>
+                    <div class="mt-2 flex">
+                        <span class="flex-1 typing items-center pl-8">- workshops</span>
+                    </div>
+                    <div class="mt-2 flex">
+                        <span class="flex-1 typing items-center pl-8">- webinars</span>
+                    </div>
+                    <div class="mt-2 flex">
+                        <span class="flex-1 typing items-center pl-8">- summits</span>
+                    </div>
+
+                    <div class="mt-2 flex">
+                        <span class="text-green-400 pl-2">goals:</span>
+                    </div>
+                    <div class="mt-2 flex">
+                        <span class="text-green-400 pl-4">educate:</span>
+                        <span class="flex-1 typing items-center pl-2">FOSS ecosystem</span>
+                    </div>
+                    <div class="mt-2 flex">
+                        <span class="text-green-400 pl-4">empower:</span>
+                        <span class="flex-1 typing items-center pl-2">contribute to open-source projects</span>
+                    </div>
+                </TerminalWindow>
+          
+              <div class="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-2 max-w-screen-xl mx-auto">
+                <div class="flex items-start gap-4">
+                  <span class="shrink-0 rounded-lg bg-gray-800 p-4">
+                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                    viewBox="0 0 32 32" xml:space="preserve" class="h-5 w-5 stroke-white" fill="none">
+               <style type="text/css">
+                   .st0{stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+               </style>
+               <line class="st0" x1="16" y1="16" x2="22" y2="10"/>
+               <polygon class="st0" points="30,6 26,6 26,2 22,6 22,10 26,10 "/>
+               <circle class="st0" cx="16" cy="16" r="6"/>
+               <path class="st0" d="M27,9c1.3,2,2,4.4,2,7c0,7.2-5.8,13-13,13S3,23.2,3,16S8.8,3,16,3c2.6,0,5,0.7,7,2"/>
+               </svg>
+                  </span>
+          
+                  <div>
+                    <h2 class="text-lg font-bold">Our Mission.</h2>
+          
+                    <p class="mt-1 text-base text-gray-300">
+                        To empower and inspire the University of Kelaniya students by promoting the principles of Free and Open Source Software (FOSS). We aim to achieve software independence for all members by educating, enabling, and fostering a culture of collaboration and innovation.
+                    </p>
+                  </div>
+                </div>
+          
+                <div class="flex items-start gap-4">
+                  <span class="shrink-0 rounded-lg bg-gray-800 p-4">
+                    <svg
+                      class="h-5 w-5 fill-transparent stroke-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path d="M15.0007 12C15.0007 13.6569 13.6576 15 12.0007 15C10.3439 15 9.00073 13.6569 9.00073 12C9.00073 10.3431 10.3439 9 12.0007 9C13.6576 9 15.0007 10.3431 15.0007 12Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12.0012 5C7.52354 5 3.73326 7.94288 2.45898 12C3.73324 16.0571 7.52354 19 12.0012 19C16.4788 19 20.2691 16.0571 21.5434 12C20.2691 7.94291 16.4788 5 12.0012 5Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                  </span>
+          
+                  <div>
+                    <h2 class="text-lg font-bold">Our Vision</h2>
+                    
+                    <p class="mt-1 text-base text-gray-300">
+                        Envisioning to foster an ecosystem of learning, innovation, and collaboration that breaks down barriers and empowers individuals to reach their fullest potential in technology!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        <History>
+    </main>
+</Layout>

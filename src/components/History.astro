@@ -1,0 +1,46 @@
+---
+import workshops from '../data/WorkshopList'
+const workshopCount = workshops.length;
+---
+<div class="bg-white dark:bg-gray-900 pt-8 sm:pt-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div class="lg:pr-4 pt-16 px-16">
+          <div class="relative overflow-hidden rounded-3xl bg-gray-900 p-8 shadow-2xl">
+            <img class="inset-0 rounded-xl w-full aspect-square object-bottom object-cover" src="/images/summit/speakers/rajitha.png" alt="">
+            <div class="absolute inset-0 bg-gray-500 mix-blend-multiply"></div>
+            <div class="absolute left-1/2 top-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl" aria-hidden="true">
+              <div class="aspect-[9/16] w-[68rem] opacity-10" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+            </div>
+            <figure class="relative isolate">
+
+              <figcaption class="mt-6 text-base leading-6 text-gray-300"><strong class="font-semibold text-white dark:text-gray-200">Dr. Rajitha Thennekoon,</strong> Senior Treasurer</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div>
+          <div class="text-base leading-7 text-gray-700 dark:text-gray-300 lg:max-w-lg">
+            <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">How We Initiated the FOSS Community</h1>
+            <div class="max-w-xl text-justify">
+              <p class="mt-6">The UOK FOSS Community emerged with a clear objective: to provide University of Kelaniya students with a robust learning environment. Originating as a Dev Community, our initial focus was on facilitating hands-on learning experiences. However, the journey was not without its challenges, and the community underwent significant reforms to address them. The steadfast support from the Dean of the Faculty of Computing and Technology played a pivotal role in overcoming obstacles and establishing the UOK FOSS Community.</p>
+              <p class="mt-8">The UOK FOSS Community stands today as a testament to the principles of open collaboration empowering our members with enriching experiences. Join us as we navigate the expansive landscape of open-source technology, fostering a professional yet inclusive atmosphere for the University of Kelaniya community</p>
+            </div>
+          </div>
+          <dl class="mt-4 grid grid-cols-2 gap-8 border-t border-gray-900/10 pt-4 sm:grid-cols-3">
+            <div>
+              <dt class="text-sm font-semibold leading-6 text-gray-600 dark:text-gray-400">Founded</dt>
+              <dd class="mt-2 text-3xl font-bold leading-10 tracking-tight text-gray-900 dark:text-gray-100">2023</dd>
+            </div>
+            <div>
+              <dt class="text-sm font-semibold leading-6 text-gray-600 dark:text-gray-400">Members</dt>
+              <dd class="mt-2 text-3xl font-bold leading-10 tracking-tight text-gray-900 dark:text-gray-100">110+</dd>
+            </div>
+            <div>
+              <dt class="text-sm font-semibold leading-6 text-gray-600 dark:text-gray-400">Events</dt>
+              <dd class="mt-2 text-3xl font-bold leading-10 tracking-tight text-gray-900 dark:text-gray-100">{workshopCount}+</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>

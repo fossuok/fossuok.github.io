@@ -1,0 +1,74 @@
+---
+import { Image } from "astro:assets"
+
+const {name, title, company, image, linkedin, facebook, twitter} = Astro.props
+---
+
+<div class="group bg-slate-900 bg-opacity-90 border-gray-500 border-opacity-40 border-collapse relative before:absolute before:inset-0 before:bg-[url('./images/noise.png')] before:bg-[length:352px_382px] gradientswiper rounded-3xl border border-transparent p-4">
+  <div class="relative">
+    <div class="relative text-center mx-auto">
+      <Image
+      src={image}
+      class="w-full rounded-2xl aspect-square mx-auto saturate-[0.7] group-hover:saturate-[0.9] transition-all duration-200 ease-in-out"
+      width="512"
+      height="512"
+      alt={name}
+      loading="eager"
+    />
+    <div class="py-2 px-3 flex gap-2 left-0 right-0 bottom-0 absolute z-10 group-hover:bg-gray-900 group-hover:bg-opacity-70 rounded-b-2xl transition-all duration-200 ease-in-out">
+      {linkedin && (
+          <a href={linkedin}>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 rounded-full bg-gray-900 p-[6px] before:fill-gray-100 fill-gray-100 hover:fill-secondary" viewBox="-4 0 52 52">
+                  <title>LinkedIn</title>
+                  <path d="M8.421 14h.052 0C11.263 14 13 12 13 9.5 12.948 6.945 11.263 5 8.526 5 5.789 5 4 6.945 4 9.5 4 12 5.736 14 8.421 14zM4 17H13V43H4zM44 26.5c0-5.247-4.253-9.5-9.5-9.5-3.053 0-5.762 1.446-7.5 3.684V17h-9v26h9V28h0c0-2.209 1.791-4 4-4s4 1.791 4 4v15h9C44 43 44 27.955 44 26.5z"/>
+              </svg>
+          </a>
+      )}
+      {facebook && (
+          <a href={facebook}>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 rounded-full bg-gray-900 p-[6px] before:fill-gray-100 fill-gray-100 hover:fill-secondary" viewBox="-2 0 52 52">
+                  <title>Facebook</title>
+                  <path d="M29,3c-5.523,0-10,4.477-10,10v5h-6v8h6v19h8V26h7l1-8h-8v-4c0-2.209,1.791-4,4-4h4V3.322 C33.091,3.125,30.921,2.996,29,3L29,3z"/>
+                </svg>
+          </a>
+      )}
+      {twitter && (
+          <a href={twitter}>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 rounded-full bg-gray-900 p-[6px] before:fill-gray-100 fill-gray-100 hover:fill-secondary"viewBox="0 0 30 30">
+                  <title>Twitter</title>
+              <path d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z"></path>
+              </svg>
+          </a>
+      )}
+      
+    </div>
+  </div>
+      <div class="py-5">
+        <h5 class="text-2xl font-semibold text-gray-900 dark:text-white transition-colors duration-100 group-hover:text-secondary" >
+          {name}
+      </h5>
+      <p class="text-gray-600 dark:text-gray-400">
+        {title} {company && "at " + company}
+    </p>
+  </div>
+    
+  </div>
+</div>
+
+<style>
+  @keyframes gradientswipe {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+    
+  }
+  .gradientswiper:hover::before {
+    animation: gradientswipe 5s linear infinite;
+  }
+</style>

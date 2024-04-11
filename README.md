@@ -1,43 +1,53 @@
-# [Astro](https://astro.build) GitHub Pages Template
+# FOSS UOK Homepage
 
-## 🤖 Automatic Deployment to GitHub Pages
+Welcome to the official repository for the FOSS UOK homepage! This repository contains the source code and assets for the FOSS UOK website. This repo uses [Astro](https://astro.build/), a modern static site generator for building faster websites.
 
-This minimal Astro project template comes with a [GitHub Action](https://github.com/features/actions) that automatically deploys your site to [GitHub Pages](https://pages.github.com/).
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [License](#license)
 
-For more information, please see our complete deployment guide—[Deploy your Astro Site to GitHub Pages](https://docs.astro.build/en/guides/deploy/github/).
+## Introduction
+The FOSS UOK homepage is a website that serves as the central hub for the FOSS UOK organization. It provides information about the organization, its projects, events, and community. The homepage is designed to be user-friendly, informative, and visually appealing.
 
-## 🚀 Project Structure
+## Features
+- **About Us:** Learn about the FOSS UOK organization, its mission, and its values.
+- **Events:** Stay up-to-date on upcoming events, workshops, and meetups organized by FOSS UOK.
+- **Blog:** Read articles, tutorials, and updates from FOSS UOK members and contributors.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Installation
+To install the FOSS UOK homepage on your local machine, follow these steps:
 
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+1. Clone the repository:
+   ```bash
+   git clone
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd foss-uok-homepage
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+5. Open your browser and visit `http://localhost:4321` to view the homepage.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Contributing
+If you would like to contribute to the FOSS UOK homepage, please follow these guidelines:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+1. Fork the repository and create a new branch.
+2. Make your changes and test them locally.
+3. Commit your changes and push them to your fork.
+4. Submit a pull request with a detailed description of your changes.
 
-Any static assets, like images, can be placed in the `public/` directory.
+## License
+The FOSS UOK homepage is open source and available under the [MIT License](LICENSE).
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Contact
+If you have any questions or feedback, please contact us at [hello@fossuok.org](mailto:hello@fossuok.org)

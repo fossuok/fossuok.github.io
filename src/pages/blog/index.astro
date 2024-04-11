@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import BlogPost from "../../components/BlogPost.astro";
+import BlogHero from "../../components/BlogHero.astro";
+
+const pageTitle = "Blog | FOSSUOK";
+const allPosts = await getCollection("blog");
+---
+
+<Layout title={pageTitle}>
+  <main class="space-y-16 mb-40 transition-fade">
+  <BlogHero />
+  <section class="container mx-auto px-4 mt-16 text-gray-700 dark:text-gray-300">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          allPosts.map((post) => (
+              <BlogPost url={"/blog/" + post.slug} title={post.data.title} author={post.data.author} date={post.data.pubDate}/>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,11 @@
+---
+import { Image } from "astro:assets";
+
+const { src, alt,link } = Astro.props;
+---
+
+<div class="px-4 py-1">
+    <a href={link} class="text-2xl font-bold" aria-label={alt}>
+        <Image src={src} alt={alt} width={150} height={96} class="object-contain h-24" loading="lazy" />
+    </a>
+  </div>
