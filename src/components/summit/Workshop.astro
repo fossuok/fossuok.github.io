@@ -1,9 +1,11 @@
 ---
-let { name, description, speakers, date, time, tag } = Astro.props;
 import { Image } from 'astro:assets';
 import Container  from '../Container.astro';
-import workshops from '../../data/WorkshopList';
+import EventPost from '../EventPost.astro';
 
+import { getCollection } from 'astro:content';
+const allWorkshops =await getCollection('events');
+const summitWorkshops= allWorkshops.filter((workshop) => workshop.data.tags.includes('OSS24'));
 ---
 <div id="speakers">
     <Container>
@@ -18,73 +20,24 @@ import workshops from '../../data/WorkshopList';
           </a>
         </div>
       </div>
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 mt-10">
-          {workshops && workshops.map((workshop, index) => (
-            <article class="flex col-span-full p-2 rounded-md bg-white dark:bg-gray-800 transition hover:-translate-y-1 hover:shadow-xl  dark:shadow-gray-800/25">
-              <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
-                <time
-                  datetime={"2024 "+workshop.date}
-                  class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900 dark:text-white"
-                >
-                  <span>2024</span>
-                  <span class="w-px flex-1 bg-gray-900/10 dark:bg-white/10"></span>
-                  <span>{workshop.date}</span>
-                </time>
-              </div>
-
-              <div class="hidden sm:flex sm:basis-56">
-                <Image
-                  alt={workshop.title}
-                  src={workshop.image}
-                  class="aspect-square h-full w-full object-cover"
-                  width={300}
-                  height={300}
-                />
-              </div>
-
-              <div class="flex flex-1 flex-col justify-between">
-                <div
-                  class="border-s border-gray-900/10 p-4 sm:!border-l-transparent sm:p-6 dark:border-white/10"
-                >
-                    <h3 class="font-bold text-xl uppercase text-gray-900 dark:text-white">
-                      {workshop.title}
-                    </h3>
-
-                  <p class="mt-2 line-clamp-3 text-lg text-gray-700 dark:text-gray-200">
-                    {workshop.description}
-                  </p>
-                </div>
-                
-                  {workshop.speakers.map((speaker, index) => (
-                    <div class="flex items-center justify-between ms-8 py-2 sm:p-2">
-                      <div class="flex items-center space-x-4">
-                      <Image
-                        alt={speaker.name}
-                        src={speaker.image}
-                        class="w-10 h-10 rounded-full"
-                        height={40}
-                        width={40}
-                      />
-                      <div>
-                        <h4 class="font-bold text-gray-900 dark:text-white">{speaker.name}</h4>
-                      </div>
-                    </div>
-                  </div>
-                  ))}
-
-                  <div class="flex items-center justify-between p-2">
-                      <span class="text-gray-900 dark:text-white sm:flex sm:items-start sm:justify-start ms-4 p-2">
-                        <span
-                          class="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-sm text-purple-700 dark:bg-purple-700 dark:text-purple-100"
-                        >
-                          {workshop.tag}
-                        </span>
-                        </span>
-                      <span class="text-gray-900 dark:text-white p-2 font-bold sm:flex sm:items-end sm:justify-end">{workshop.time}</span>
-                </div>
-              </div>
-            </article>
-            ))}
+        <div class="grid grid-cols-1 gap-8 mt-10">
+        {summitWorkshops && summitWorkshops.map((workshop, index) => (
+            <EventPost event={{
+              title : workshop.data.title,
+              description : workshop.data.description,
+              image : workshop.data.image,
+              date : workshop.data.date,
+              speakers : workshop.data.speakers,
+              tags : workshop.data.tags,
+              time : workshop.data.time
+            }}
+            url = {workshop.url}
+            hoverAnimation = {true}
+            height="h-68"
+            />
+          ))
+        }
     </div>
+    
     </Container>
 </div>
