@@ -4,9 +4,6 @@ import EventPost from "./EventPost.astro";
 import Container from "./Container.astro";
 
 const allEvents = await getCollection("events");
-const e1= allEvents[0];
-const e2= allEvents[1];
-const e3= allEvents[2];
 allEvents.sort((a, b) => b.data.date - a.data.date);
 ---
 <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
