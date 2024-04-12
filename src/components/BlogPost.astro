@@ -7,6 +7,7 @@ dayjs.extend(relativeTime);
 let formattedDate = dayjs(date).fromNow();
 
 import {members,imageCDNPath} from '../data/memberList';
+import { Image } from 'astro:assets';
 let authorData;
 members.filter((m) => m.slug === author).map((m) => {
     authorData = m;
@@ -24,7 +25,7 @@ members.filter((m) => m.slug === author).map((m) => {
         </div>
 
         <div class="hidden sm:block sm:shrink-0">
-          <img alt={authorData.name} src={imageCDNPath(authorData.slug)} class="w-16 max-h-full rounded-lg object-cover shadow-sm"/>
+          <Image alt={authorData.name} src={imageCDNPath(authorData.slug)} class="w-16 max-h-full rounded-lg object-cover shadow-sm" width={64} height={64} loading='eager'/>
         </div>
       </div>
 
