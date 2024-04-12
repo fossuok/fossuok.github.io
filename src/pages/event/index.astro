@@ -35,7 +35,7 @@ allEvents.sort((a, b) => b.data.date - a.data.date);
                   tags: event.data.tags,
                   time: event.data.time,
                   speakers: event.data.speakers,
-                  register: event.data.registrationLink
+                  register: event.data.registrationLink || null,
                 }}
               />
             ))
