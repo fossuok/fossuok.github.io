@@ -1,0 +1,6 @@
+{
+    "sonarlint.connectedMode.project": {
+        "connectionId": "fossuok",
+        "projectKey": "fossuok_fossuok.github.io"
+    }
+}
