@@ -8,6 +8,7 @@ date: 2024-03-16
 time: '10:30 AM - 12:00 PM'
 location: Faculty of Computing and Technology, University of Kelaniya
 tags:
+  - OSS24
   - Docker
   - Workshop
 speakers:

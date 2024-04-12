@@ -8,9 +8,9 @@ date: 2024-03-16
 time: '01:00 PM - 03:00 PM'
 location: Faculty of Computing and Technology, University of Kelaniya
 tags:
+  - OSS24
   - Workshop
   - Data Science
-  - Telco Data
 speakers:
   - name: Aloka Abeysirigunawardana
     title: Senior Data Scientist

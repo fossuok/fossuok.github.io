@@ -8,9 +8,9 @@ date: 2024-03-23
 time: '09:00 AM - 11:00 AM'
 location: Faculty of Computing and Technology, University of Kelaniya
 tags:
+  - OSS24
   - Workshop
   - GitHub Actions
-  - Automation
 speakers:
   - name: Suvin Kodithuwakku
     title: Software Engineer

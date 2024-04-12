@@ -9,6 +9,7 @@ time: '9:00 AM - 10:30 PM'
 location: Faculty of Computing and Technology, University of Kelaniya
 slug: oss24-devops-101-workshop
 tags:
+  - OSS24
   - DevOps
   - Workshop
 speakers:

@@ -8,9 +8,9 @@ date: 2024-03-30
 time: '09:00 AM - 11:00 AM'
 location: Online
 tags:
+  - OSS24
   - Workshop
   - NLP
-  - AI
 speakers:
   - name: Meesha Mervyn
     title: Demonstrator

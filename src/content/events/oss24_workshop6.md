@@ -8,7 +8,7 @@ date: 2024-04-06
 time: '09:00 AM - 11:00 AM'
 location: Faculty of Computing and Technology, University of Kelaniya
 tags:
-  - Workshop
+  - OSS24
   - DevSecOps
   - Cybersecurity
 speakers:
