@@ -2,104 +2,38 @@
 import { getCollection } from "astro:content";
 import EventPost from "./EventPost.astro";
 import Container from "./Container.astro";
+import Slider from "./Slider.astro";
 
 const allEvents = await getCollection("events");
-allEvents.sort((a, b) => b.data.date - a.data.date);
+allEvents.sort((a, b) => b.data.date - a.data.date).slice(0, 5);
 ---
-<link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
-
-<script type="module">
-  import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
-
-  const keenSlider = new KeenSlider(
-    '#keen-slider',
-    {
-      loop: true,
-      slides: {
-        origin: 'center',
-        perView: 1.15,
-        spacing: 16,
-      },
-      breakpoints: {
-        '(min-width: 1024px)': {
-          slides: {
-            origin: 'auto',
-            perView: 1.25,
-            spacing: 32,
-          },
-        },
-      },
-    },
-    []
-  )
-
-  const keenSliderPrevious = document.getElementById('keen-slider-previous')
-  const keenSliderNext = document.getElementById('keen-slider-next')
-
-  keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
-  keenSliderNext.addEventListener('click', () => keenSlider.next())
-</script>
-
-<Container>
-<section class="bg-gray-50 dark:bg-gray-900 w-full">
-  <div class="mx-auto max-w-full px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 xl:py-24">
-    <div class="max-w-7xl items-end justify-between sm:flex sm:pe-6 lg:pe-8">
-      <h2 class="max-w-xl text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl">
-        Browse Events
-      </h2>
-
-      <div class="mt-8 flex gap-4 lg:mt-0">
-        <button
-          aria-label="Previous slide"
-          id="keen-slider-previous"
-          class="rounded-full w-8 h-8 border border-primary text-gray-200 transition hover:bg-primary hover:text-white"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/>
-          </svg>
-        </button>
-
-        <button
-          aria-label="Next slide"
-          id="keen-slider-next"
-          class="rounded-full w-8 h-8 border border-primary text-gray-200 transition hover:bg-primary hover:text-white"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
-          </svg>
-        </button>
-      </div>
+<Slider
+  title="Events"
+  subtitle="Stay up to date with our latest events and community meetups. Whether you are looking to learn something new or network with like-minded individuals, we've got you covered."
+  button="View all events"
+  link="/event">
+{
+    allEvents.filter(
+      (event) => event.data.date < new Date()
+    ).map((event) => (
+    <div class="keen-slider__slide">
+        <EventPost
+        fixedHeight=true
+        hoverAnimation="false"
+        url={"/events/" + event.slug}
+        event={{
+            title: event.data.title,
+            date: event.data.date,
+            location: event.data.location,
+            description: event.data.description,
+            image: event.data.image,
+            slug: event.slug,
+            tags: event.data.tags,
+            time: event.data.time,
+            speakers: event.data.speakers,
+        }}
+        />
     </div>
-
-    <div class="-mx-6 mt-8 lg:col-span-1 lg:mx-0">
-        
-        <div id="keen-slider" class="keen-slider items-center">
-            {
-                allEvents.filter(
-                  (event) => event.data.date < new Date()
-                ).map((event) => (
-                <div class="keen-slider__slide">
-                    <EventPost
-                    fixedHeight=true
-                    hoverAnimation="false"
-                    url={"/events/" + event.slug}
-                    event={{
-                        title: event.data.title,
-                        date: event.data.date,
-                        location: event.data.location,
-                        description: event.data.description,
-                        image: event.data.image,
-                        slug: event.slug,
-                        tags: event.data.tags,
-                        time: event.data.time,
-                        speakers: event.data.speakers,
-                    }}
-                    />
-                </div>
-                ))
-              }
-        </div>
-    </div>
-  </div>
-</section>
-</Container>
+    ))
+  }
+</Slider>
