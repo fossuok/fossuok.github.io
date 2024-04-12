@@ -1,14 +1,12 @@
 ---
+import BGGradient from "./BGGradient.astro"
 import Container from "./Container.astro"
 import { Image } from "astro:assets"
 
 ---
 
 <div class="relative" id="blog">
-  <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
-      <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
-      <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
-  </div>
+  <BGGradient />
   <Container>
       <div class="relative pt-32 flex flex-col justify-center h-full text-center">
           <h1 class="mt-8 text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">Discover Our Latest Articles</h1>

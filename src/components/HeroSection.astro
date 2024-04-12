@@ -1,28 +1,26 @@
 ---
+import BGGradient from "./BGGradient.astro";
 import Container from "./Container.astro"
 import { Image } from 'astro:assets';
 
 ---
 
 <div class="relative" id="home">
-    <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
-        <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
-        <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
-    </div>
+    <BGGradient />
     <Container>
         <div class="relative pt-16 ml-auto">
           <section class="flex justify-center items-center bg-customDarkBg1 hero-bg-gradient"
           id="home"
         >
           <div class="w-full md:w-[800px] xl:w-[900px] flex flex-col justify-center items-center pt-16 md:pt-16 lg:pt-20 text-center">
-              <div class="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-white  px-8 sm:px-8 md:px-20 lg:px-4">
+              <div class="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide text-gray-800 dark:text-white px-8 sm:px-8 md:px-20 lg:px-4">
                 <span class="inline md:hidden">FOSS Community</span>
                 <span class="hidden md:inline">Embrace the Power of Open-Source and Collaboration</span>
               </div>
-              <div class="mt-2 sm:mt-2 text-2xl sm:text-4xl lg:text-3xl xl:text-3xl font-bold tracking-wide  text-white  px-8 sm:px-20 md:px-24 lg:px-24">
+              <div class="mt-2 sm:mt-2 text-2xl sm:text-4xl lg:text-3xl xl:text-3xl font-bold tracking-wide text-gray-800 dark:text-white px-8 sm:px-20 md:px-24 lg:px-24">
                 at University of Kelaniya
               </div>
-              <div class="text-slate-200 text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
+              <div class="dark:text-slate-200 text-slate-800 text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
                 Join us on our journey to explore, collaborate, and innovate in the world of FOSS!
               </div>
               <div class="flex flex-col gap-4 sm:flex-row mt-14 justify-center">

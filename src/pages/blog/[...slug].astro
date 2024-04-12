@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Container from "../../components/Container.astro";
 import { members, imageCDNPath } from "../../data/memberList";
+import BGGradient from "../../components/BGGradient.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blog");
@@ -31,20 +32,7 @@ members
 	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <Layout title={entry.data.title + " | FOSSUOK BLOG"} frontmatter={entry.data}>
   <main class="space-y-16 mb-40 transition-fade">
-    <div class="relative" id="blog">
-      <div
-        aria-hidden="true"
-        class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20 -z-10"
-      >
-        <div
-          class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"
-        >
-        </div>
-        <div
-          class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"
-        >
-        </div>
-      </div>
+      <BGGradient />
       <Container>
         <header>
           <div class="gap-2">
