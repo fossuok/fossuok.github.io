@@ -4,12 +4,12 @@ import { Image } from "astro:assets"
 const {name, title, company, image, linkedin, facebook, twitter} = Astro.props
 ---
 
-<div class="group bg-slate-900 bg-opacity-90 border-gray-500 border-opacity-40 border-collapse relative before:absolute before:inset-0 before:bg-[url('./images/noise.png')] before:bg-[length:352px_382px] gradientswiper rounded-3xl border border-transparent p-4">
+<div class="group bg-opacity-90 border-gray-500 border-opacity-40 border-collapse relative before:absolute before:inset-0 before:bg-[url('./images/noise.png')] before:bg-[length:352px_382px] gradientswiper rounded-3xl border border-transparent p-4">
   <div class="relative">
     <div class="relative text-center mx-auto">
       <Image
       src={image}
-      class="w-full rounded-2xl aspect-square mx-auto saturate-[0.7] group-hover:saturate-[0.9] transition-all duration-200 ease-in-out"
+      class="w-full rounded-2xl aspect-square mx-auto saturate-[0.7] group-hover:saturate-100 transition-all duration-200 ease-in-out"
       width="512"
       height="512"
       alt={name}
@@ -47,7 +47,7 @@ const {name, title, company, image, linkedin, facebook, twitter} = Astro.props
         <h5 class="text-2xl font-semibold text-gray-900 dark:text-white transition-colors duration-100 group-hover:text-secondary" >
           {name}
       </h5>
-      <p class="text-gray-600 dark:text-gray-400">
+      <p class="text-gray-700 dark:text-gray-300">
         {title} {company && "at " + company}
     </p>
   </div>

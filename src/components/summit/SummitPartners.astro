@@ -11,11 +11,11 @@ import { BronzeSponsor,CommunityPartner,DiamondSponsor,GoldSponsor,SilverSponsor
       <!-- Diamond Sponsors -->
       {DiamondSponsor && DiamondSponsor.length > 0 && (
         <div class="pt-4 text-center">
-          <h2 class="text-gray-300 dark:text-gray-900">Diamond Sponsors</h2>
+          <h2 class="text-gray-600 dark:text-gray-900">Diamond Sponsors</h2>
           </div>
           <div class={DiamondSponsor.length<3 ? `grid grid-cols-1 md:grid-cols-${DiamondSponsor.length} items-center` :"grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 items-center"}>
             {DiamondSponsor.map((sponsor) => (
-              <div class="p-4 m-auto">
+              <div class="p-1 md:p-4 m-auto">
                 <SponsorLogo src={sponsor.image} alt={sponsor.name} link={sponsor.link} />
                 </div>
               ))}
@@ -25,11 +25,11 @@ import { BronzeSponsor,CommunityPartner,DiamondSponsor,GoldSponsor,SilverSponsor
       <!-- Gold Sponsors -->
       {GoldSponsor && GoldSponsor.length > 0 && (
         <div class="pt-4 text-center">
-          <h2 class="text-gray-300 dark:text-gray-900">Gold Sponsors</h2>
+          <h2 class="text-gray-600 dark:text-gray-900">Gold Sponsors</h2>
           </div>
           <div class={GoldSponsor.length<4 ? `grid grid-cols-1 md:grid-cols-${GoldSponsor.length} items-center` :"grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 items-center"}>
             {GoldSponsor.map((sponsor) => (
-              <div class="p-4 m-auto">
+              <div class="p-1 md:p-4 m-auto">
                 <SponsorLogo src={sponsor.image} alt={sponsor.name} link={sponsor.link} />
                 </div>
               ))}
@@ -39,11 +39,11 @@ import { BronzeSponsor,CommunityPartner,DiamondSponsor,GoldSponsor,SilverSponsor
       <!-- Silver Sponsors -->
       {SilverSponsor && SilverSponsor.length > 0 && (
         <div class="pt-4 text-center">
-          <h2 class="text-gray-300 dark:text-gray-900">Silver Sponsors</h2>
+          <h2 class="text-gray-600 dark:text-gray-900">Silver Sponsors</h2>
           </div>
           <div class={SilverSponsor.length<4 ? `grid grid-cols-1 md:grid-cols-${SilverSponsor.length} items-center` :"grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 items-center"}>
             {SilverSponsor.map((sponsor) => (
-              <div class="p-4 m-auto">
+              <div class="p-1 md:p-4 m-auto">
                 <SponsorLogo src={sponsor.image} alt={sponsor.name} link={sponsor.link} />
                 </div>
               ))}
@@ -53,11 +53,11 @@ import { BronzeSponsor,CommunityPartner,DiamondSponsor,GoldSponsor,SilverSponsor
       <!-- Bronze Partners -->
       {BronzeSponsor && BronzeSponsor.length > 0 && (
         <div class="pt-4 text-center">
-          <h2 class="text-gray-300 dark:text-gray-900">Bronze Sponsors</h2>
+          <h2 class="text-gray-600 dark:text-gray-900">Bronze Sponsors</h2>
           </div>
           <div class={BronzeSponsor.length<4 ? `grid grid-cols-1 md:grid-cols-${BronzeSponsor.length} items-center` :"grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 items-center"}>
             {BronzeSponsor.map((sponsor) => (
-              <div class="p-4 m-auto">
+              <div class="p-1 md:p-4 m-auto">
                 <SponsorLogo src={sponsor.image} alt={sponsor.name} link={sponsor.link} />
                 </div>
               ))}
@@ -67,11 +67,11 @@ import { BronzeSponsor,CommunityPartner,DiamondSponsor,GoldSponsor,SilverSponsor
     <!-- Community Partners -->
     {CommunityPartner && CommunityPartner.length > 0 && (
       <div class="pt-4 text-center">
-        <h2 class="text-gray-300 dark:text-gray-900">Community Partners</h2>
+        <h2 class="text-gray-600 dark:text-gray-900">Community Partners</h2>
       </div>
-      <div class={CommunityPartner.length<3 ? `grid grid-cols-1 md:grid-cols-${CommunityPartner.length} items-center` :"grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 items-center"}>
+      <div class={CommunityPartner.length<=3 ? `grid grid-cols-1 md:grid-cols-${CommunityPartner.length} items-center` :"grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 items-center"}>
           {CommunityPartner.map((sponsor) => (
-            <div class="p-4 m-auto">
+            <div class="p-1 md:p-4 m-auto">
               <SponsorLogo src={sponsor.image} alt={sponsor.name} link={sponsor.link} />
             </div>
               ))}

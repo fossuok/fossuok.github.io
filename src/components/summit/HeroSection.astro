@@ -10,7 +10,7 @@ import { Image } from "astro:assets"
     <Container>
         <div class="relative pt-32 ml-auto">
             <div class="lg:w-2/3 text-center mx-auto">
-              <Image src="/images/summit_logo.png" alt="Summit Logo" class="w-72 max-h-full block m-auto" width={64} height={28} loading="eager"/>
+                <div class="w-72 h-32 inset-0 bg-[url('/images/summit_logo_dark.png')] dark:bg-[url('/images/summit_logo.png')] bg-contain bg-center bg-no-repeat mx-auto z-0"></div> 
               <p class="mt-8 text-gray-700 dark:text-gray-300 text-base font-mono">April 27<sup class="lowercase">th</sup> 2024</p>
               <p class="text-gray-700 dark:text-gray-300 text-base font-mono">University of Kelaniya, Sri lanka</p>
                 <h1 class="mt-8 text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">Biggest Dev Summit at <span class="text-primary dark:text-white">University of Kelaniya</span></h1>
@@ -19,7 +19,7 @@ import { Image } from "astro:assets"
                       href="/summit/register"
                       class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
                     >
-                      <span class="relative text-lg font-semibold text-white font-mono"
+                      <span class="relative text-lg font-semibold text-white"
                         >Get Free Tickets</span
                       >
                     </a>
@@ -28,7 +28,7 @@ import { Image } from "astro:assets"
                       class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
                     >
                       <span
-                        class="relative text-base font-semibold text-primary dark:text-white font-mono"
+                        class="relative text-base font-semibold text-primary dark:text-white"
                         >Speakers</span
                       >
                     </a>
@@ -37,7 +37,7 @@ import { Image } from "astro:assets"
                       class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
                     >
                       <span
-                        class="relative text-base font-semibold text-primary dark:text-white font-mono"
+                        class="relative text-base font-semibold text-primary dark:text-white"
                         >Sponsorship Oppotunity</span
                       >
                     </a>
@@ -47,31 +47,31 @@ import { Image } from "astro:assets"
                     <div
                       class="flex group flex-col rounded-lg border border-gray-100 px-4 py-8 text-center dark:border-gray-800"
                     >
-                      <dt class="order-last text-lg font-medium text-gray-500 dark:text-gray-400">
+                      <dt class="order-last text-lg font-medium text-gray-600 dark:text-gray-300">
                         Speakers
                       </dt>
             
-                      <dd class="text-4xl font-extrabold text-white md:text-5xl">10+</dd>
+                      <dd class="text-4xl font-extrabold text-gray-800 dark:text-gray-100 md:text-5xl">10+</dd>
                     </div>
             
                     <div
                       class="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center dark:border-gray-800"
                     >
-                      <dt class="order-last text-lg font-medium text-gray-500 dark:text-gray-400">
+                      <dt class="order-last text-lg font-medium text-gray-500 dark:text-gray-300">
                         Workshops
                       </dt>
             
-                      <dd class="text-4xl font-extrabold text-white md:text-5xl">5</dd>
+                      <dd class="text-4xl font-extrabold text-gray-800 dark:text-gray-100 md:text-5xl">5</dd>
                     </div>
             
                     <div
                       class="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center dark:border-gray-800"
                     >
-                      <dt class="order-last text-lg font-medium text-gray-500 dark:text-gray-400">
+                      <dt class="order-last text-lg font-medium text-gray-500 dark:text-gray-300">
                         Days
                       </dt>
             
-                      <dd class="text-4xl font-extrabold text-white md:text-5xl">6</dd>
+                      <dd class="text-4xl font-extrabold text-gray-800 dark:text-gray-100 md:text-5xl">6</dd>
                     </div>
                   </dl>
                 </div>
