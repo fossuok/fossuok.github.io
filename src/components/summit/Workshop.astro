@@ -31,7 +31,7 @@ const summitWorkshops= allWorkshops.filter((workshop) => workshop.data.tags.incl
               tags : workshop.data.tags,
               time : workshop.data.time
             }}
-            url = {workshop.url}
+            url = {"/events/"+workshop.slug}
             hoverAnimation = {true}
             height="h-68"
             />

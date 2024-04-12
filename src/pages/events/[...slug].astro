@@ -16,28 +16,28 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 <Layout title={entry.data.title+" | FOSSUOK BLOG"} frontmatter={entry.data}>
-  <div class="relative" id="blog">
-    <BGGradient />
-    <Container>
-      <header>
-				<div class="wrapper stack gap-2">
-					<div class:list={['hero stack gap-4']}>
-            <div class="relative pt-32 flex flex-col justify-center h-full px-8">
-              <a class="back-link text-blue-900 dark:text-blue-300" href="/blog/">👈 View all Events</a>
-              <h1 class="mt-8 text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">{entry.data.title}</h1>
-              <p class="mt-8 text-lg text-gray-700 dark:text-gray-300">{entry.data.description}</p>
-            </div>
-						<div class="details m-8">
-							<div class="tags">
-								{entry.data.tags.map((t) => <a href={`/events/tags/${t}/`} class="p-2 bg-sky-950 dark:bg-sky-300 rounded-md">{t}</a>)}
-							</div>
+	<main class="space-y-16 transition-fade mx-auto text-gray-700 dark:text-gray-300">
+	  <div class="relative" id="blog">
+		<BGGradient />
+		<Container>
+		  <header>
+			<div class="wrapper stack gap-2">
+				<div class:list={['hero stack gap-4']}>
+					<div class="relative pt-32 flex flex-col justify-center h-full px-8">
+					<a class="back-link text-blue-900 dark:text-blue-300" href="/blog/">👈 View all Events</a>
+					<h1 class="mt-8 text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">{entry.data.title}</h1>
+					<p class="mt-8 text-lg text-gray-700 dark:text-gray-300">{entry.data.description}</p>
+					</div>
+					<div class="details m-8">
+						<div class="tags">
+							{entry.data.tags.map((t) => <a href={`/events/tags/${t}/`} class="p-2 bg-sky-950 dark:bg-sky-300 rounded-md">{t}</a>)}
 						</div>
 					</div>
 				</div>
-			</header>
-    </Container>
-  </div>
-  <main class="space-y-16 transition-fade mx-auto text-gray-700 dark:text-gray-300">
+			</div>
+		  </header>
+		</Container>
+	  </div>
 		<div class="stack gap-15">
 			<main class="wrapper">
 				<Container>
@@ -48,22 +48,22 @@ const { Content } = await entry.render();
 				</Container>
 			</main>
 		</div>
+		<Container>
+		  <section class="rounded-xl border border-gray-700 bg-gray-800 max-w-full w-2/3 min-w-fit mx-auto p-8">
+			<div class="flex items-center gap-4">
+			  <div class="pl-4">
+				<h2 class="text-lg font-medium text-white">Committee</h2>
+		  
+				<div class="flow-root">
+				  <ul class="-m-1 mt-8 flex flex-wrap">
+					
+				  </ul>
+				</div>
+			  </div>
+			</div>
+		  </section>
+		</Container>
 	</main>
-  <Container>
-    <section class="rounded-xl border border-gray-700 bg-gray-800 max-w-full w-2/3 min-w-fit mx-auto p-8">
-      <div class="flex items-center gap-4">
-        <div class="pl-4">
-          <h2 class="text-lg font-medium text-white">Committee</h2>
-    
-          <div class="flow-root">
-            <ul class="-m-1 mt-8 flex flex-wrap">
-              
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-  </Container>
 </Layout>
 
 <style>
