@@ -16,10 +16,11 @@ const posts = allPosts.sort(
         <p class="lg:mx-auto lg:w-6/12 text-gray-600 dark:text-gray-300">
           Here are some of the latest articles from our blog. We cover a wide range of topics from software development to design and more.
         </p>
-      <div class="mt-8 text-center">
-        <a href="/blog" class="inline-block px-6 py-3 text-sm font-medium text-white bg-gray-800 rounded-lg">View all articles</a>
+        <div class="mt-8 text-center">
+          <a href="/blog" class="inline-block px-6 py-3 text-sm font-medium text-white bg-gray-800 rounded-lg">View all articles</a>
+        </div>
       </div>
-      </div>
+
       <div class="grid gap-8 lg:grid-cols-3">
         {posts.map((post) => (
           <BlogPost url={"/blog/" + post.slug} title={post.data.title} author={post.data.author} date={post.data.pubDate}/>
