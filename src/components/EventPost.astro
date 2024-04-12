@@ -1,13 +1,16 @@
 ---
 import { Image } from "astro:assets";
 
-const { event,url,hoverAnimation=true,fixedHeight=false } = Astro.props
+const { event,url,hoverAnimation,height } = Astro.props
 const { title, description, image, date, speakers, tags, time } = event
 const month = date.toLocaleString('default', { month: 'short' }).slice(0, 3);
+
+const hoverCSS = (hoverAnimation!=='false' ? "transition hover:-translate-y-1 ease-in-out" : "")+" group hover:shadow-lg dark:shadow-gray-800/25"
+const heightCSS = (height ? height : "h-96")+" flex col-span-full p-2 rounded-md bg-white dark:bg-gray-800 hover:shadow-lg dark:shadow-gray-800/25"
 ---
-<div class={(hoverAnimation?"transition hover:-translate-y-1 ease-in-out ":"")+"group hover:shadow-xl dark:shadow-gray-800/25"}>
-<a href={url} class="overflow-hidden rounded-lg  border-gray-100" >
-    <article class={(fixedHeight?"h-80 ":"")+"flex col-span-full rounded-md bg-white dark:bg-gray-800"}>
+<div class={hoverCSS}>
+<a href={url} class="overflow-hidden rounded-lg border-gray-300" >
+  <article class={heightCSS}>
     <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
       <time
         datetime={date.toISOString()}
@@ -21,11 +24,11 @@ const month = date.toLocaleString('default', { month: 'short' }).slice(0, 3);
 
     <div class="hidden sm:flex sm:basis-56">
       <Image
-        alt={image.alt || title}
+        alt={title}
         src={image.url}
-        class="aspect-square h-full object-cover"
-        width={288}
-        height={288}
+        class="aspect-square h-full w-full object-cover"
+        width={300}
+        height={300}
       />
     </div>
 
@@ -45,7 +48,7 @@ const month = date.toLocaleString('default', { month: 'short' }).slice(0, 3);
         {speakers.map((speaker, index) => (
           <div class="flex items-center justify-between ms-8 py-2 sm:p-2">
             <div class="flex items-center space-x-4">
-            <img
+            <Image
               alt={speaker.name}
               src={speaker.image.url}
               class="w-10 h-10 rounded-full"
@@ -61,18 +64,15 @@ const month = date.toLocaleString('default', { month: 'short' }).slice(0, 3);
 
         <div class="flex items-center justify-between p-2">
             <span class="text-gray-900 dark:text-white sm:flex sm:items-start sm:justify-start ms-4 p-2">
-                {tags.map((tag, index) => (
-                    <span
-                        class="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-sm text-purple-700 dark:bg-purple-700 dark:text-purple-100 mx-1"
-                    >
-                        {tag}
-                    </span>
-                ))}
-              
-              </span>
-            <span class="text-gray-900 dark:text-white p-2 font-bold sm:flex sm:items-end sm:justify-end">{time}</span>
+              {tags.map((tag, index) => (
+                <span class="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 mx-1 text-sm text-purple-700 dark:bg-purple-700 dark:text-purple-100" >
+                  {tag}
+                </span>
+              ))}
+            </span>
+            <span class="text-gray-900 dark:text-white p-2 font-bold hidden sm:justify-end">{time}</span>
       </div>
     </div>
-</article>
+  </article>
 </a>
 </div>      
