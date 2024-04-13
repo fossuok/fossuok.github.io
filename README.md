@@ -1,4 +1,4 @@
-# FOSS UOK Homepage
+# FOSSUOK Homepage
 
 Welcome to the official repository for the FOSS UOK homepage! This repository contains the source code and assets for the FOSS UOK website. This repo uses [Astro](https://astro.build/), a modern static site generator for building faster websites.
 
@@ -26,7 +26,7 @@ To install the FOSS UOK homepage on your local machine, follow these steps:
    ```
 2. Navigate to the project directory:
    ```bash
-   cd foss-uok-homepage
+   cd fossuok.github.io
    ```
 3. Install the dependencies:
    ```bash
@@ -34,7 +34,7 @@ To install the FOSS UOK homepage on your local machine, follow these steps:
    ```
 4. Start the development server:
    ```bash
-   npm start
+   npm run dev
    ```
 5. Open your browser and visit `http://localhost:4321` to view the homepage.
 
