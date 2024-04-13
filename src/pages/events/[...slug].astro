@@ -24,13 +24,13 @@ const { Content } = await entry.render();
 			<div class="wrapper stack gap-2">
 				<div class:list={['hero stack gap-4']}>
 					<div class="relative pt-32 flex flex-col justify-center h-full px-8">
-					<a class="back-link text-blue-900 dark:text-blue-300" href="/blog/">👈 View all Events</a>
+					<a class="back-link text-blue-900 dark:text-blue-300" href="/events/">👈 View all Events</a>
 					<h1 class="mt-8 text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">{entry.data.title}</h1>
 					<p class="mt-8 text-lg text-gray-700 dark:text-gray-300">{entry.data.description}</p>
 					</div>
 					<div class="details m-8">
 						<div class="tags">
-							{entry.data.tags.map((t) => <a href={`/events/tags/${t}/`} class="p-2 bg-sky-950 dark:bg-sky-300 rounded-md">{t}</a>)}
+							{entry.data.tags.map((t) => <a href={`/events/tags/${t}/`} class="p-2 bg-sky-200 dark:bg-sky-800 dark:text-gray-100 rounded-md">{t}</a>)}
 						</div>
 					</div>
 				</div>
@@ -41,28 +41,13 @@ const { Content } = await entry.render();
 		<div class="stack gap-15">
 			<main class="wrapper">
 				<Container>
-					{entry.data.image.url && <img src={entry.data.image.url} alt={entry.data.image.alt || ''} />}
+					{entry.data.image.url && <img src={entry.data.image.url} class="w-96 text-center mx-auto aspect-square object-cover rounded-lg shadow-lg mb-8" alt={entry.data.image.alt || ''} />}
 					<div class="content space-y-4 prose prose-xl dark:prose-invert prose-slate py-8 md:px-16 my-8 md:m-auto w-full md:w-10/12 lg:max-w-2xl rounded-lg">
 						<Content />
 					</div>
 				</Container>
 			</main>
 		</div>
-		<Container>
-		  <section class="rounded-xl border border-gray-700 bg-gray-800 max-w-full w-2/3 min-w-fit mx-auto p-8">
-			<div class="flex items-center gap-4">
-			  <div class="pl-4">
-				<h2 class="text-lg font-medium text-white">Committee</h2>
-		  
-				<div class="flow-root">
-				  <ul class="-m-1 mt-8 flex flex-wrap">
-					
-				  </ul>
-				</div>
-			  </div>
-			</div>
-		  </section>
-		</Container>
 	</main>
 </Layout>
 

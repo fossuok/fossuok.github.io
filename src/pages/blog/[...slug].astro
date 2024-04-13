@@ -58,7 +58,7 @@ members
                   {
                     entry.data.tags.map((t) => (
                       <span
-                        class="p-2 bg-sky-950 dark:bg-sky-300 rounded-md"
+                        class="p-2 bg-sky-200 dark:bg-sky-800 dark:text-gray-100 rounded-md"
                       >
                         {t}
                       </span>
@@ -123,9 +123,9 @@ members
     </main>
     <Container>
       <section
-        class="rounded-xl border border-gray-700 bg-gray-800 max-w-full w-2/3 min-w-fit mx-auto p-8"
+        class="rounded-xl border border-gray-700 bg-gray-100 dark:bg-gray-800 max-w-md min-w-fit mx-auto p-8"
       >
-        <div class="flex items-center gap-4">
+        <div class="flex flex-wrap md:flex-nowrap items-center gap-4">
           <img
             alt=""
             src={imageCDNPath(author.slug)}
@@ -133,7 +133,7 @@ members
           />
 
           <div class="pl-4">
-            <h2 class="text-lg font-medium text-white">About {author.name}</h2>
+            <h2 class="text-lg font-medium text-gray-900 dark:text-white">About {author.name}</h2>
             <p class="text-lg text-gray-700 dark:text-gray-300">{author.bio}</p>
 
             <div class="flow-root">
@@ -143,7 +143,7 @@ members
                     <li class="p-1 leading-none">
                       <a
                         href={social.url}
-                        class="text-xs font-medium text-gray-300 hover:text-secondary"
+                        class="text-xs font-medium text-gray-600 dark:text-gray-300 hover:text-secondary"
                       >
                         {" "}
                         {social.name}{" "}
