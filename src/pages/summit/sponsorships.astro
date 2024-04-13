@@ -3,7 +3,7 @@ import Container from '../../components/Container.astro';
 import Layout from '../../layouts/Layout.astro';
 import { getEntry,getCollection } from 'astro:content';
 const collection = await getEntry('static', 'sponsorship');
-const { Content, headings } = await collection.render();
+const { Content } = await collection.render();
 
 const title = "Sponsorships | Open-Source Summit '24 at University of Kelaniya";
 const description = "Don't miss the Open-Source Summit '24 at the University of Kelaniya! Learn how to harness the power of open-source software for innovation.";

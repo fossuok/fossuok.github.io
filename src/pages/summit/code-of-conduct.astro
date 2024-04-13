@@ -1,7 +1,7 @@
 ---
 import Container from '../../components/Container.astro';
 import Layout from '../../layouts/Layout.astro';
-import { getEntry,getCollection } from 'astro:content';
+import { getEntry } from 'astro:content';
 const collection = await getEntry('static', 'code-of-conduct');
 const { Content, headings } = await collection.render();
 
