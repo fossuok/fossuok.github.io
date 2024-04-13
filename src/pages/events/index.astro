@@ -5,18 +5,20 @@ import EventPost from "../../components/EventPost.astro";
 import EventHero from "../../components/EventHero.astro";
 import Container from "../../components/Container.astro";
 
-const pageTitle = "Events | FOSSUOK";
 const allEvents = await getCollection("events");
 allEvents.sort((a, b) => b.data.date - a.data.date);
+
+const title = "Events | FOSSUOK";
+const description = "Stay updated with the latest events happening in the FOSS community at the University of Kelaniya.";
+const OGImage = "/images/thumbnail.jpg";
 ---
 
-<Layout title={pageTitle}>
-  <main class="space-y-16 mb-40 transition-fade">
+<Layout title={title} description={description} OGImage={OGImage} menu="Events">
     <EventHero />
-    <section
-      class="container mx-auto px-4 mt-16 text-gray-700 dark:text-gray-300"
-    >
     <Container>
+    <section
+      class="text-gray-700 dark:text-gray-300"
+    >
       <h2 class="text-3xl font-bold mb-6">Upcoming Events</h2>
         <div class="grid grid-cols-1 gap-8">
           {
@@ -24,7 +26,9 @@ allEvents.sort((a, b) => b.data.date - a.data.date);
               (event) => event.data.date >= new Date()
             ).reverse().map((event) => (
               <EventPost
-                url={"/events/" + event.slug}
+                url = {"/events/"+workshop.slug}
+                hoverAnimation = {true}
+                height="h-68"
                 event={{
                   title: event.data.title,
                   date: event.data.date,
@@ -41,14 +45,11 @@ allEvents.sort((a, b) => b.data.date - a.data.date);
             ))
           }
         </div>
+      </section>
     </Container>
-    </section>
-    <section
-      class="container mx-auto px-4 mt-16 text-gray-700 dark:text-gray-300"
-    >
     <Container>
       <h2 class="text-3xl font-bold mb-6">Past Events</h2>
-        <div class="grid grid-cols-1 gap-8">
+        <div class="grid grid-cols-1 gap-8 mt-10">
           {
             allEvents.filter(
               (event) => event.data.date < new Date()
@@ -70,8 +71,6 @@ allEvents.sort((a, b) => b.data.date - a.data.date);
             ))
           }
         </div>
-      </Container>
-    </section>
 
-  </main>
+    </Container>
 </Layout>

@@ -4,10 +4,13 @@ import Layout from '../../layouts/Layout.astro';
 import { getEntry,getCollection } from 'astro:content';
 const collection = await getEntry('static', 'sponsorship');
 const { Content, headings } = await collection.render();
+
+const title = "Sponsorships | Open-Source Summit '24 at University of Kelaniya";
+const description = "Don't miss the Open-Source Summit '24 at the University of Kelaniya! Learn how to harness the power of open-source software for innovation.";
+const OGImage = "https://images.typeform.com/images/ZciRkDSTkk8S/image/default";
 ---
 
-<Layout title="Sponsorship Oppotunities | Open-Source Summit '24" menu="Home">
-	<main class="space-y-16 transition-fade">
+<Layout title={title} description={description} OGImage={OGImage} >
 		<div class="relative py-16">
 			<main class="wrapper">
 			  <Container>
@@ -19,7 +22,6 @@ const { Content, headings } = await collection.render();
 			  </Container>
 			</main>
 		  </div>
-	</main>
 </Layout>
 
 <style>

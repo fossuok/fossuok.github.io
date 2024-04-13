@@ -14,9 +14,13 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+const title = entry.data.title+" | FOSSUOK Events";
+const description = entry.data.description;
+const OGImage = "/images/thumbnail.jpg";
 ---
-<Layout title={entry.data.title+" | FOSSUOK BLOG"} frontmatter={entry.data}>
-	<main class="space-y-16 transition-fade mx-auto text-gray-700 dark:text-gray-300">
+
+<Layout title={title} description={description} OGImage={OGImage} frontmatter={entry.data}>
 	  <div class="relative" id="blog">
 		<BGGradient />
 		<Container>
@@ -48,7 +52,6 @@ const { Content } = await entry.render();
 				</Container>
 			</main>
 		</div>
-	</main>
 </Layout>
 
 <style>

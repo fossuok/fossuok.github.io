@@ -54,7 +54,9 @@ const {title,  description, type="website", OGImage="/images/thumbnail.jpg"} = A
     </head>
     <body class="bg-white dark:bg-gray-900 scroll-smooth max-w-full">
         <AppHeader />
-        <slot />
+            <main class="space-y-16 mb-8 transition-fade text-gray-800 dark:text-gray-200">
+                <slot />
+            </main>
         <AppFooter />
     </body>
 </html>

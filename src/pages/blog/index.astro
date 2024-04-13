@@ -4,12 +4,14 @@ import Layout from "../../layouts/Layout.astro";
 import BlogPost from "../../components/BlogPost.astro";
 import BlogHero from "../../components/BlogHero.astro";
 
-const pageTitle = "Blog | FOSSUOK";
 const allPosts = await getCollection("blog");
+
+const title = "Blog | FOSSUOK";
+const description = "The official blog of FOSSUOK, the Free and Open Source Software Community of University of Kelaniya.";
+const OGImage = "/images/thumbnail.jpg";
 ---
 
-<Layout title={pageTitle}>
-  <main class="space-y-16 mb-40 transition-fade">
+<Layout title={title} description={description} OGImage={OGImage}>
   <BlogHero />
   <section class="container mx-auto px-4 mt-16 text-gray-700 dark:text-gray-300">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -20,5 +22,4 @@ const allPosts = await getCollection("blog");
         }
       </div>
     </section>
-  </main>
 </Layout>

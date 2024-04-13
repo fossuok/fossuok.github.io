@@ -21,6 +21,10 @@ members
   .map((m) => {
     author = m;
   });
+
+const title = entry.data.title + " | FOSSUOK BLOG";
+const description = "Read the blog post " + entry.data.title + " by " + author.name;
+const OGImage = "/images/thumbnail.jpg";
 ---
 <script>(function(d, s, id) {
 	var js, fjs = d.getElementsByTagName(s)[0];
@@ -30,8 +34,9 @@ members
 	fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<Layout title={entry.data.title + " | FOSSUOK BLOG"} frontmatter={entry.data}>
-  <main class="space-y-16 mb-40 transition-fade">
+
+
+<Layout title={title} description={description} OGImage={OGImage} frontmatter={entry.data}>
       <BGGradient />
       <Container>
         <header>
@@ -157,7 +162,6 @@ members
         </div>
       </section>
     </Container>
-  </main>
 </Layout>
 
 <style>

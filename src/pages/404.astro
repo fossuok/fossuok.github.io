@@ -4,10 +4,13 @@ import Container from "../components/Container.astro"
 import History from "../components/History.astro"
 import TerminalWindow from "../components/TerminalWindow.astro"
 import Layout from "../layouts/Layout.astro"
-const pageTitle = "Page Not Found | FOSSUOK"
+
+const title = "Page not found | FOSSUOK";
+const description = "We are sorry, but the page you requested was not found";
+const OGImage = "/images/thumbnail.jpg";
 ---
-<Layout title={pageTitle}>
-    <main class="space-y-16 mb-40 transition-fade text-gray-800 dark:text-gray-200">
+
+<Layout title={title} description={description} OGImage={OGImage} >
         <Container>
             <div class="container">
                 <div class="relative pt-16">
@@ -27,5 +30,4 @@ const pageTitle = "Page Not Found | FOSSUOK"
                 </div>
             </div>
         </Container>
-    </main>
 </Layout>

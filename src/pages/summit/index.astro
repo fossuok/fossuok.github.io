@@ -7,15 +7,17 @@ import CallToAction from '../../components/CallToAction.astro';
 import Workshops from '../../components/summit/Workshop.astro';
 import Partners from '../../components/summit/SummitPartners.astro'
 import Committee from '../../components/summit/Committee.astro'
+
+const title = "Open-Source Summit '24 at University of Kelaniya";
+const description = "Don't miss the Open-Source Summit '24 at the University of Kelaniya! Learn how to harness the power of open-source software for innovation.";
+const OGImage = "https://images.typeform.com/images/ZciRkDSTkk8S/image/default";
 ---
 
-<Layout title="Open-Source Summit '24 at University of Kelaniya">
-	<main class="space-y-16 mb-40">
+<Layout title={title} description={description} OGImage={OGImage} >
 		<SummitHeroSection/>
 		<Partners/>
 		<Speakers/>
 		<Tracks/>
 		<Workshops/>
 		<Committee />
-	</main>
 </Layout>

@@ -3,10 +3,13 @@ import AboutHero from "../components/AboutHero.astro"
 import History from "../components/History.astro"
 import TerminalWindow from "../components/TerminalWindow.astro"
 import Layout from "../layouts/Layout.astro"
-const pageTitle = "About | FOSSUOK"
+
+const title = "About | FOSSUOK";
+const description = "Student-led initiative promoting Free & Open Source Software (FOSS) among students.";
+const OGImage = "/images/thumbnail.jpg";
 ---
-<Layout title={pageTitle}>
-    <main class="space-y-16 mb-40 transition-fade text-gray-800 dark:text-gray-200">
+
+<Layout title={title} description={description} OGImage={OGImage} >
         <AboutHero />
         <section class="container mx-auto px-4 md:px-0">
             <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
@@ -117,5 +120,4 @@ const pageTitle = "About | FOSSUOK"
             </div>
           </section>
         <History>
-    </main>
 </Layout>
