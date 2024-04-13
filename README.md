@@ -22,7 +22,7 @@ To install the FOSS UOK homepage on your local machine, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone
+   git clone https://github.com/fossuok/fossuok.github.io.git
    ```
 2. Navigate to the project directory:
    ```bash
