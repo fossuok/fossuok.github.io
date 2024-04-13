@@ -4,9 +4,11 @@ slug: sponsorship
 ---
 ![Open-Source Summit '24 LOGO](/images/summit_logo.png)
 
-# Sponsorship Opportunities
+## Sponsorship Opportunities
 
 Open Source Summit '24 is a unique opportunity to connect with a diverse community of open source enthusiasts, developers, and industry leaders. By sponsoring the event, you can showcase your commitment to open source, promote your brand, and connect with talented developers and technologists who are passionate about open source. There are several sponsorship levels available, each with its own set of benefits and opportunities. If you are interested in sponsoring Open Source Summit '24, please review the sponsorship levels below and contact us for more information on how to become a sponsor.
+
+[![Static Badge](https://img.shields.io/badge/Download_Sponsorship_Proposal-pdf-blue?style=for-the-badge&logo=docusign)](https://fossuok.org/assets/oss24-sponsorship.pdf)
 
 ## Why Sponsor Open Source Summit '24?
 
