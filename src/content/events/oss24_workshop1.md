@@ -20,7 +20,7 @@ speakers:
       url: /images/summit/speakers/nikila.png
       alt: Nikila Fernando
   - name: Krishan Shamod
-    title: Associate DevOps Engineer
+    title: DevOps Engineer
     company: Insighture
     image:
         url: /images/summit/speakers/krishan.png
