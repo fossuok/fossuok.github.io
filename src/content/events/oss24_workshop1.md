@@ -17,13 +17,13 @@ speakers:
     title: Site Reliability Engineer
     company: Fortude
     image:
-      url: /images/summit/speakers/nikila.png
+      url: /images/summit/speakers/nikila.jpg
       alt: Nikila Fernando
   - name: Krishan Shamod
     title: DevOps Engineer
     company: Insighture
     image:
-        url: /images/summit/speakers/krishan.png
+        url: /images/summit/speakers/krishan.jpg
         alt: Krishan Shamod
 ---
 

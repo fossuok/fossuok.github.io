@@ -16,7 +16,7 @@ speakers:
     title: CyberSecurity Architect
     company: Virtusaa
     image:
-      url: /images/summit/speakers/tharaka.png
+      url: /images/summit/speakers/tharaka.jpg
       alt: Tharaka Mahabage
 ---
 

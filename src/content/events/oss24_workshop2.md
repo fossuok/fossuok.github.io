@@ -16,13 +16,13 @@ speakers:
     title: Former Assiciate Software Engineer
     company: TechVenturas
     image:
-      url: /images/summit/speakers/pasan.png
+      url: /images/summit/speakers/pasan.jpg
       alt: Pasan Devin
   - name: Sachithra Manamperi
     title: Associate Cloud Security Engineer
     company: GTN
     image:
-        url: /images/summit/speakers/sachithra.png
+        url: /images/summit/speakers/sachithra.jpg
         alt: Sachithra Manamperi
 ---
 

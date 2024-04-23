@@ -16,7 +16,7 @@ speakers:
     title: Senior Data Scientist
     company: Dialog Axiata PLC
     image:
-      url: /images/summit/speakers/aloka.png
+      url: /images/summit/speakers/aloka.jpg
       alt: Aloka Abeysirigunawardana
 ---
 

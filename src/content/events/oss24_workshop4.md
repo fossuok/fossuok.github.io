@@ -16,7 +16,7 @@ speakers:
     title: Software Engineer
     company: WSO2
     image:
-      url: /images/summit/speakers/suvin.png
+      url: /images/summit/speakers/suvin.jpg
       alt: Suvin Kodithuwakku
 ---
 

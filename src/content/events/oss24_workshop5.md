@@ -16,7 +16,7 @@ speakers:
     title: Demonstrator
     company: University of Kelaniya
     image:
-      url: /images/summit/speakers/meesha.png
+      url: /images/summit/speakers/meesha.jpg
       alt: Meesha Mervyn
 ---
 
