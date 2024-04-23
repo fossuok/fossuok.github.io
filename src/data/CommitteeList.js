@@ -94,6 +94,30 @@ const committee = {
         linkedin: "https://www.linkedin.com/in/tharuka-jayawardane-in/",
         twitter: "https://twitter.com/Tharuka_J",
     },
+    ushan: {
+        name: "Ushan Ikshana",
+        image: "/images/summit/committee/ushan.jpg",
+        title: "Committee Member",
+        linkedin: "https://www.linkedin.com/in/im-ushan-ikshana/",
+    },
+    dulanjika: {
+        name: "Dulanjika Bandara",
+        image: "/images/summit/committee/dulanjika.jpg",
+        title: "Committee Member",
+        linkedin: "https://www.linkedin.com/in/dulanjika-bandara-9a72082a6/",
+    },
+    kesara: {
+        name: "Kesara Kulathunga",
+        image: "/images/summit/committee/kesara.jpg",
+        title: "Committee Member",
+        linkedin: "https://www.linkedin.com/in/kesara-kulathunga/",
+    },
+    abdul: {
+        name: "Abdul Qaadir",
+        image: "/images/summit/committee/abdul.jpg",
+        title: "Committee Member",
+        linkedin: "https://www.linkedin.com/in/abdul-qaadir/",
+    },
 }
 
 const workshopCommitee = [
@@ -108,7 +132,6 @@ const workshopCommitee = [
     committee.umesh,
     committee.pivindi,
     committee.pansilu,
-
 ]
 
 const summitCommitee = [
@@ -117,10 +140,13 @@ const summitCommitee = [
     committee.dewmini,
     committee.imesha,
     committee.hansana,
+    committee.ushan,
     committee.ransika,
-    committee.nimasha,
     committee.pathum,
-    { ...committee.damitha, title: "Committee Member" },
+    committee.nimasha,
+    committee.dulanjika,
+    committee.kesara,
+    committee.abdul,
     committee.supuni,
     committee.tharushi,
     committee.udasri,
