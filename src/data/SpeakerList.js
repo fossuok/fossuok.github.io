@@ -21,7 +21,7 @@ const speakerList = [
         title: "Co-Founder & CTO",
         company: "Verdentra",
         image: "/images/summit/speakers/anuradha.jpg",
-        linkedin: "hhttps://www.linkedin.com/in/anuradhaweeraman/",
+        linkedin: "https://www.linkedin.com/in/anuradhaweeraman/",
     },
     {
         slug: "sashika",
