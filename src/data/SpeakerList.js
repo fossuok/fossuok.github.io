@@ -10,8 +10,8 @@ const speakerList = [
     {
         slug: "jayasanka",
         name: "Jayasanka Weerasinghe",
-        title: "Technical Lead",
-        company: "OpenMRS",
+        title: "Technical Lead at OpenMRS | Org Admin",
+        company: "Google Summer of Code",
         image: "/images/summit/speakers/jayasanka.jpg",
         linkedin: "https://www.linkedin.com/in/jayasanka-sack/",
     },
@@ -21,7 +21,7 @@ const speakerList = [
         title: "Co-Founder & CTO",
         company: "Verdentra",
         image: "/images/summit/speakers/anuradha.jpg",
-        linkedin: "hhttps://www.linkedin.com/in/anuradhaweeraman/",
+        linkedin: "https://www.linkedin.com/in/anuradhaweeraman/",
     },
     {
         slug: "sashika",
