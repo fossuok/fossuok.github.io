@@ -1,7 +1,7 @@
 ---
 import Container from "../Container.astro";
 import SponsorLogo from "./SponsorLogo.astro";
-import { BronzeSponsor,CommunityPartner,DiamondSponsor,GoldSponsor,SilverSponsor } from '../../data/SponsorList'
+import { CommunityPartner,DiamondSponsor,BeveragePartner } from '../../data/SponsorList'
 ---
 <section id="sponsors" class="pt-8 pb-16">
   <Container>
@@ -22,40 +22,12 @@ import { BronzeSponsor,CommunityPartner,DiamondSponsor,GoldSponsor,SilverSponsor
             )}
   
       <!-- Gold Sponsors -->
-      {GoldSponsor && GoldSponsor.length > 0 && (
+      {BeveragePartner && BeveragePartner.length > 0 && (
         <div class="pt-4 text-center">
-          <h2 class="text-gray-600 dark:text-gray-900">Gold Sponsors</h2>
+          <h2 class="text-gray-600 dark:text-gray-900">Beverage Partner</h2>
           </div>
-          <div class={GoldSponsor.length<4 ? `grid grid-cols-1 md:grid-cols-${GoldSponsor.length} items-center` :"grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 items-center"}>
-            {GoldSponsor.map((sponsor) => (
-              <div class="p-1 md:p-4 m-auto">
-                <SponsorLogo src={sponsor.image} alt={sponsor.name} link={sponsor.link} />
-                </div>
-              ))}
-              </div>
-            )}
-      
-      <!-- Silver Sponsors -->
-      {SilverSponsor && SilverSponsor.length > 0 && (
-        <div class="pt-4 text-center">
-          <h2 class="text-gray-600 dark:text-gray-900">Silver Sponsors</h2>
-          </div>
-          <div class={SilverSponsor.length<4 ? `grid grid-cols-1 md:grid-cols-${SilverSponsor.length} items-center` :"grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 items-center"}>
-            {SilverSponsor.map((sponsor) => (
-              <div class="p-1 md:p-4 m-auto">
-                <SponsorLogo src={sponsor.image} alt={sponsor.name} link={sponsor.link} />
-                </div>
-              ))}
-              </div>
-            )}
-      
-      <!-- Bronze Partners -->
-      {BronzeSponsor && BronzeSponsor.length > 0 && (
-        <div class="pt-4 text-center">
-          <h2 class="text-gray-600 dark:text-gray-900">Bronze Sponsors</h2>
-          </div>
-          <div class={BronzeSponsor.length<4 ? `grid grid-cols-1 md:grid-cols-${BronzeSponsor.length} items-center` :"grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 items-center"}>
-            {BronzeSponsor.map((sponsor) => (
+          <div class={BeveragePartner.length<4 ? `grid grid-cols-1 md:grid-cols-${BeveragePartner.length} items-center` :"grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 items-center"}>
+            {BeveragePartner.map((sponsor) => (
               <div class="p-1 md:p-4 m-auto">
                 <SponsorLogo src={sponsor.image} alt={sponsor.name} link={sponsor.link} />
                 </div>

@@ -11,11 +11,13 @@ const DiamondSponsor = [
     }
 ]
 
-const GoldSponsor = []
-
-const SilverSponsor = []
-
-const BronzeSponsor = []
+const BeveragePartner = [
+    {
+        name: 'Barista',
+        image: '/images/summit/sponsors/barista.png',
+        link: 'https://www.barista.lk/',
+    }
+]
 
 const CommunityPartner = [
     {
@@ -35,4 +37,4 @@ const CommunityPartner = [
     },
 ]
 
-export { DiamondSponsor, GoldSponsor, SilverSponsor, BronzeSponsor, CommunityPartner }
+export { DiamondSponsor, BeveragePartner, CommunityPartner }
