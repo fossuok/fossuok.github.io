@@ -26,7 +26,7 @@ const OGImage = "https://fossuok.org/images/thumbnail.jpg";
               (event) => event.data.date >= new Date()
             ).reverse().map((event) => (
               <EventPost
-                url = {"/events/"+workshop.slug}
+                url = {"/events/"+event.slug}
                 hoverAnimation = {true}
                 height="h-68"
                 event={{
