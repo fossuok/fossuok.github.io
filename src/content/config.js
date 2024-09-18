@@ -41,6 +41,7 @@ const eventsCollection = defineCollection({
         time: z.string(),
         location: z.string(),
         tags: z.array(z.string()),
+        registrationLink: z.string().optional(),
         speakers: z.array(z.object({
             name: z.string(),
             title: z.string(),
