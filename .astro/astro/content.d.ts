@@ -167,6 +167,13 @@ declare module 'astro:content' {
   collection: "events";
   data: InferEntrySchema<"events">
 } & { render(): Render[".md"] };
+"oss24_post_summit_meetup.md": {
+	id: "oss24_post_summit_meetup.md";
+  slug: "oss24-post-summit-meetup";
+  body: string;
+  collection: "events";
+  data: InferEntrySchema<"events">
+} & { render(): Render[".md"] };
 "oss24_workshop1.md": {
 	id: "oss24_workshop1.md";
   slug: "oss24-devops-101-workshop";
