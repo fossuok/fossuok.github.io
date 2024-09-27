@@ -19,12 +19,12 @@ speakers:
     image:
       url: /images/events/speakers/joy.jpeg
       alt: Joy Rathnayake
-  - name: TBA
-    title: "-"
-    company: "-"
+  - name: Vivekvinushanth Christopher
+    title: Senior Software Engineer
+    company: WSO2
     image:
-        url: /images/events/speakers/blank.png
-        alt: TBA
+        url: /images/events/speakers/christopher.jpg
+        alt: Vivekvinushanth Christopher
 ---
 
 ## 🎉 Post-Summit Meetup 2024: Continue the Momentum! 🎉
