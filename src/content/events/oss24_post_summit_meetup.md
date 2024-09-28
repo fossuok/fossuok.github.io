@@ -10,14 +10,15 @@ location: WSO2 Office, Colombo 4
 slug: oss24-post-summit-meetup
 registrationLink: https://forms.gle/2QydAX9QAsrQMthx8
 tags:
-  - OSS24
+  - API Management
+  - IAM
   - Meetup
 speakers:
   - name: Joy Rathnayake
     title: Solutions Architect
     company: WSO2
     image:
-      url: /images/events/speakers/joy.jpeg
+      url: /images/events/speakers/joy.jpg
       alt: Joy Rathnayake
   - name: Vivekvinushanth Christopher
     title: Senior Software Engineer
