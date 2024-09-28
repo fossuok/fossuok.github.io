@@ -45,7 +45,7 @@ This is not just another meetup. It's a chance to:
 - **Exclusive access to WSO2:** Experience firsthand the atmosphere of one of Sri Lanka's leading tech companies.
 - Whether you're a student, developer, or tech enthusiast, the Post-Summit Meetup offers something for everyone!
 
-### 🙏 Special Thanks to WSO2
+### Special Thanks to WSO2
 
 We would like to extend a special thanks to **WSO2**, our official Meetup Partner, for generously hosting the event and providing refreshments for the attendees. Their ongoing support for the open-source community and commitment to fostering innovation have been key in making this event possible. We are proud to collaborate with an organization that shares our passion for open-source technology.
 
