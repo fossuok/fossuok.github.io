@@ -10,5 +10,5 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkReadingTime],
   },
-  site: 'https://fossuok.org',
+  site: 'https://dev.fossuok.org',
 });
